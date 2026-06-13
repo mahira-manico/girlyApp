@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-      <header>
+        <header>
         <nav>
             <ul>
                 <li><a href="#Accueil">Accueil</a></li>
@@ -14,9 +14,259 @@
                 <li><a href="#apropos">A Propos</a></li>
                 <li><a href="#communaute">Communauté</a></li>
                 <li><a href="#contacts">Contacts</a></li>
+
+                <search>
+                <form action="./search/">
+                    <input type="search" id="products"  placeholder="Rechercher un produit..."/>
+                    <button type="submit">Rechercher</button>
+                </form>
+                </search>
+
             </ul>
         </nav>
     </header>
+
+    <main role="main">
+
+
+        <div id="dashobard1">
+            <section id="task">
+              <div id="mood-board">
+                <span id="mood-title">Comment te sens-tu aujourd'hui?</span>
+                 <div id="emoji-row">
+                    <button type="button" class="mood-emojis" data-mood="happy" aria-label="joyeux emoji">😸</button>
+                    <button type="button" class="mood-emojis" data-mood="sad" aria-label="triste emoji">😿</button>
+                    <button type="button" class="mood-emojis" data-mood="hype" aria-label="excité emoji">🤩</button>
+                    <button type="button" class="mood-emojis" data-mood="normal" aria-label="normal emoji">🙂</button>
+                 </div>
+              </div>
+
+              <div id="task-section">
+                <button type="button" id="add-task" aria-label="add a task">+</button>
+                <ul>
+                    <li class="to-do-tasks">
+                        <span class="text-to-do"></span>
+                        <input type="checkbox" class="done-btn" aria-label="marquer comme terminer"/>
+                        <button type="button" class="delete-btn" aria-label="supprimer de la liste">❌</button>
+                    </li>
+                </ul>
+              </div>
+
+              <button type="button" id="more-btn">Voir Plus</button>
+
+            </section>
+        </div>
+
+        <section id="calendar">
+
+            <button type="button" id="btn-calendar" aria-label="ajouter une tâche">+</button>
+
+            <ul id="calendar-month">
+                <li id="previous">&#39;</li>
+                <li id="next">&#8250;</li>
+                <li>June</li>
+                <small>2026</small>
+            </ul>
+
+            <div id="calendar-days">
+                <ul id="row-days">
+                    <li class="days">
+                        <span class="title-days"><time>Lundi</time></span>
+                        <span class="title-days"><time>Mardi</time></span>
+                        <span class="title-days"><time>Mercredi</time></span>
+                        <span class="title-days"><time>Jeudi</time></span>
+                        <span class="title-days"><time>Vendredi</time></span>
+                        <span class="title-days"><time>Samedi</time></span>
+                        <span class="title-days"><time>Dimanche</time></span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="calendar-number">
+                <ul id="numbers">
+                    <li class="day">1</li>
+                    <li class="day">2</li>
+                    <li class="day">3</li>
+                    <li class="day">4</li>
+                    <li class="day">5</li>
+                    <li class="day">6</li>
+                    <li class="day">7</li>
+                    <li class="day">8</li>
+                    <li class="day">9</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section id="profil-board">
+         
+         <div id="profil-row">
+          <span id="username">Bonjour ...</span>
+          <span id="status"></span>
+          <span id="member-since"></span>
+          
+          <div class="profil-section">
+            <img src="" class="logo-profil" loading="lazy" alt="logo de favoris">
+            <p>Mes favoris</p>
+          </div>
+
+           <div class="profil-section">
+            <img src="" class="logo-profil" loading="lazy" alt="logo de ma messagerie">
+            <p>Ma messagerie</p>
+          </div>
+
+           <div class="profil-section">
+            <img src="" class="logo-profil" loading="lazy" alt="logo de magasin">
+            <p>Mes magasins fav</p>
+          </div>
+
+           <div class="profil-section">
+            <img src="" class="logo-profil" loading="lazy" alt="logo ma wishlist">
+            <p>Ma wishlist</p>
+          </div>
+
+           <div class="profil-section">
+            <img src="" class="logo-profil" loading="lazy" alt="logo objectif">
+            <p>Mes objectifs</p>
+          </div>
+
+           <div class="profil-section">
+            <img src="" class="logo-profil" loading="lazy" alt="logo ma progression">
+            <p>Ma progression</p>
+          </div>
+
+           <div class="profil-section">
+            <img src="" class="logo-profil" loading="lazy" alt="logo paramètre">
+            <p>Paramètres</p>
+          </div>
+
+          <button type="button" id="logout">Déconnexion</button>
+
+        </div>
+
+        </section>
+
+        <section id="favorite">
+            <div id="fav-rows">
+                <span id="fav-title">Mes favoris</span>
+
+                <article class="card-fav">
+
+                    <div class="cards">
+                       <img src="" alt="image fashion" class="cards-img">
+                       <p class="cards-title"></p>
+                       <p class="cards-desc"></p>
+                       <p class="cards-price"></p>
+                    </div>
+
+                    <button type="button" class="see-more">Voir Plus</button>
+
+                </article>
+            </div>
+        </section>
+
+        <section id="communuty">
+            <div id="blog-row">
+                <span id="blog-title">La communauté</span>
+                <button type="button" id="post-btn">Créer un post</button>
+                <div id="row-users">
+                    <p class="user-names"></p>
+                    <p class="user-text"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="more-section">
+            <span id="more-title">Sa pourrait te plaire</span>
+                <article class="card-fav">
+   
+                    <div class="cards">
+                       <img src="" alt="image fashion" class="cards-img">
+                       <p class="cards-title"></p>
+                       <p class="cards-desc"></p>
+                       <p class="cards-price"></p>
+                    </div>
+
+                    <button type="button" class="see-more">Voir Plus</button>            
+        </section>
+
+        <section id="messages">
+            <span id="message-title">Messagerie</span>
+            <div id="image-row">
+              <ul id="message-row">
+
+                <li class="message-text">
+                 <img src="" alt="boite au lettre" class="letter-type">
+                 <span id="text1"></span>
+                </li>
+
+              </ul>
+            </div>
+        </section>
+
+    </main>
+
+     <footer>
+        <img src="" alt="" loading="lazy" id="logo" width="150" height="50">
+        
+        <nav id="more">
+         <div class="inside-footer">
+            <h4></h4>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+         </div>
+        </nav>
+       
+        <nav id="policy">
+        <div class="inside-footer">
+            <h4></h4>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+         </div>
+        </nav>
+
+        <nav id="about">
+        <div class="inside-footer">
+            <h4></h4>
+             <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+         </div>
+        </nav>
+
+        <section id="social">
+            <div id="insta-round">
+               <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Instagram">
+                <i class="fa-brands fa-instagram"></i>
+               </a>
+            </div>
+
+            <div id="tiktok-round">
+                <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Tik Tok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+
+            <div id="facebook-round">
+                 <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                 </a>
+            </div>
+
+            <small>Made with love by Mahira @Copywright</small>
+        </section>
+    </footer>
     
     
 </body>
