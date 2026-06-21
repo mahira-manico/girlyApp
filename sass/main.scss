@@ -1,0 +1,44 @@
+//ALL IMPORTS
+@use 'variables' as *;
+@use 'mixin' as *;
+@use 'keyframes' as *;
+@use 'popup' as *;
+
+@use 'home/header';
+@use 'home/home';
+@use 'home/footer';
+
+@use 'dashboard/dashboard';
+@use 'dashboard/task_board';
+@use 'dashboard/calendar_board';
+@use 'dashboard/profil';
+@use 'dashboard/favorite';
+@use 'dashboard/community';
+@use 'dashboard/more';
+@use 'dashboard/messages';
+
+@use 'home/community-home';
+@use 'home/ecology';
+@use 'home/intro';
+@use 'home/trendy';
+
+@use 'login/login';
+@use 'login/fidelity';
+@use 'login/newsletter-login';
+
+
+//COMMON SETTINGS
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    background-color:$soft-apricot;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}

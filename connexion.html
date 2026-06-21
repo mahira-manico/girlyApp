@@ -3,182 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/sass/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e5c3b78bc9.js" crossorigin="anonymous"></script>
     <title>Page de Connexion</title>
 </head>
+
 <body>
+  <!--------HEADER----------->
+  <header>
+    <nav>
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#Accueil">Accueil</a></li>
-                <li><a href="#Espace">Mon Espace</a></li>
-                <li><a href="#apropos">A Propos</a></li>
-                <li><a href="#communaute">Communauté</a></li>
-                <li><a href="#contacts">Contacts</a></li>
+        <div class="nav-top-bar">
 
-                <search>
-                <form action="./search/">
-                    <input type="search" id="products"  placeholder="Rechercher un produit..."/>
-                    <button type="submit">Rechercher</button>
-                </form>
-                </search>
-
-            </ul>
-        </nav>
-    </header>
-
-    <main role="main">
-
-        <form role="form" id="connexion">
-            <h1 id="main-title">Créer un compte et rejoins la communauté!</h1>
-            <div id="login">
- 
-
-            <div id="bloc1">
-                <label for="name">Prénom</label>
-                <input type="text" id="name" autocapitalize="words" minlength="2" maxlength="20" required/>
-
-                <label for="surname">Nom</label>
-                <input type="text" id="surname" autocapitalize="words" minlength="2" maxlength="20" required/>
-            </div>
-
-            <div id="bloc2">
-                <label for="email">Email</label>
-                <input type="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
-
-                <label for="birthdate">Date de naissance</label>
-                <input type="date" id="birthdate" required/>
-            </div>
-
-            <div id="bloc3">
-                <label for="password">Mot de passe</label>
-                <input type="password" id="password" minlength="8" maxlength="20" required/>
-
-                <label for="confirm-pswd">Confirmer le mot de passe</label>
-                <input type="password" id="confirm-pswd"  minlength="8" maxlength="20" required/>
-            </div>
-
-            <small>*</small>
-
-           <article id="checks">
-            <label for="check-policy">lorem ipsum</label>
-            <input type="checkbox" id="check-policy" required>
-
-            <label for="check-ad">lorem ipsum</label>
-            <input type="checkbox" id="check-ad">
-           </article>
-        
-        <section id="fidelity">
-            <span>Notre Programme de Fidélité</span>
-
-            <div id="logo-ads">
-                <div class="squares">
-                <img src="" alt="" loading="lazy" >
-                </div>
-                
-                <div class="squares">
-                <img src="" alt="" loading="lazy">
-                </div>
-
-                <div class="squares">
-                <img src="" alt="" loading="lazy">
-                </div>
-            </div>
-
-            <p id="speech-fidelity"></p>
-        </section>
-
-        <button type="submit" id="form">Créer un compte</button>
-
-            </div>
-        </form>
-        
-
-        <p class="forgot-password-text">
-           Mot de passe oublié ? <a href="#">Pas de panique, clique ici !</a>
-    </p>
-
-        <section id="newlsetter">
-           <article id="right">
-            <h2>Inscrit toi à notre newsletter!</h2>
-            <label for="email-news"></label>
-            <input type="email" id="email-news" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-           <div id="text-section">
-            <p></p>
-            <p></p>
-           </div>
-           </article>
-
-           <div id="left">
-             <picture>
-               <source media="(max-width: 600px)" srcset="">
-               <img src="" alt="">
-             </picture>
-           </div>
-        </section>
-    </main>
-
-     <footer>
-        <img src="" alt="" loading="lazy" id="logo" width="150" height="50">
-        
-        <nav id="more">
-         <div class="inside-footer">
-            <h4></h4>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-         </div>
-        </nav>
-       
-        <nav id="policy">
-        <div class="inside-footer">
-            <h4></h4>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-         </div>
-        </nav>
-
-        <nav id="about">
-        <div class="inside-footer">
-            <h4></h4>
-             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-         </div>
-        </nav>
-
-        <section id="social">
-            <div id="insta-round">
-               <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Instagram">
-                <i class="fa-brands fa-instagram"></i>
-               </a>
-            </div>
-
-            <div id="tiktok-round">
-                <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Tik Tok">
-                    <i class="fa-brands fa-tiktok"></i>
+            <div class="menu-burger">
+                <a href="#Menu" aria-label="Ouvrir le menu de navigation">
+                    <i class="fa-solid fa-bars"></i>
                 </a>
             </div>
 
-            <div id="facebook-round">
-                 <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Facebook">
-                    <i class="fa-brands fa-facebook"></i>
-                 </a>
+            <div class="logo-site">
+                <a href="index.html">
+                    <video autoplay loop muted playsinline class="logo-gif">
+                     <source src="assets/video/logo.webm" type="video/webm">
+                     </video>
+                </a>
             </div>
 
-            <small>Made with love by Mahira @Copywright</small>
+            <ul class="nav-links-right">
+                <li>
+                    <a href="#fidelity">
+                        <i class="fa-solid fa-spa" aria-hidden="true"></i>
+                        <span class="link-text">Fidélité</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#newsletter">
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                        <span class="link-text">La Newsletter</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-users" aria-hidden="true"></i>
+                        <span class="link-text">Mon Espace</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span class="link-text">Accueil</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+
+        <!-----SEARCH BAR----->
+        <search>
+            <form>
+                <input type="search" id="products" placeholder="Rechercher un produit..."/>
+                <button type="submit" aria-label="rechercher">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </search>
+
+    </nav>
+  </header>
+
+    <main role="main">
+
+        <!---------FORM ACCOUNT---------->
+        <form role="form">
+            <h1>Créer un compte et rejoins la communauté!</h1>
+
+            <div id="login">
+
+                <div class="bloc">
+                    <label for="name">Prénom</label>
+                    <input type="text" id="name" autocapitalize="words" minlength="2" maxlength="20" required placeholder="Enter your name.."/>
+
+                    <label for="surname">Nom</label>
+                    <input type="text" id="surname" autocapitalize="words" minlength="2" maxlength="20" required placeholder="Enter your surname.."/>
+                </div>
+
+                <div class="bloc">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="Enter your e-mail.."/>
+
+                    <label for="birthdate">Date de naissance</label>
+                    <input type="date" id="birthdate" required/>
+                </div>
+
+                <div class="bloc">
+                    <label for="password">Mot de passe</label>
+                    <input type="password" id="password" minlength="8" maxlength="20" required placeholder="Enter a password.."/>
+
+                    <label for="confirm-pswd">Confirmer le mot de passe</label>
+                    <input type="password" id="confirm-pswd" minlength="8" maxlength="20" required placeholder="Confirm your password.."/>
+                </div>
+            </div>
+
+            <!-------CHECKBOXES------->
+            <article id="checks">
+                <small>*Mentions obligatoires pour la création du compte.</small>
+
+                <div id="policy1">
+                    <label for="check-policy">J'accepte les <a href="#">Conditions Générales d'Utilisation</a> et je certifie avoir pris connaissance de la <a href="#">Politique de Confidentialité</a> (RGPD) concernant le traitement de mes données personnelles.</label>
+                    <input type="checkbox" id="check-policy" required>
+                </div>
+
+                <div id="policy2">
+                    <label for="check-ad">Je souhaite rejoindre le club exclusif et recevoir par email les actus, les bons plans de la communauté et les offres personnalisées.</label>
+                    <input type="checkbox" id="check-ad">
+                </div>
+            </article>
+
+            <button type="submit" id="btn-create" class="pop-up-trigger">Créer un compte</button>
+            <p class="forgot-password-text">
+                Mot de passe oublié ? <a href="#">Pas de panique, clique ici !</a>
+            </p>
+        </form>
+
+        <!------FIDELITY SECTION------->
+        <section id="fidelity">
+            <h2>Notre Programme de Fidélité</h2>
+
+            <div id="logo-ads">
+                <div class="squares">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-gift" aria-hidden="true"></i>
+                    </div>
+                    <h3>Welcome Gift</h3>
+                    <p>Dès ton inscription, reçois un bon de -15% et un sticker virtuel exclusif pour ton profil.</p>
+                </div>
+
+                <div class="squares">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-star" aria-hidden="true"></i>
+                    </div>
+                    <h3>Glow Points</h3>
+                    <p>Chaque commande te rapporte des étoiles. 100 étoiles accumulées = la livraison gratuite à vie !</p>
+                </div>
+
+                <div class="squares">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-trophy" aria-hidden="true"></i>
+                    </div>
+                    <h3>VIP Community</h3>
+                    <p>Accède aux ventes privées 48h avant tout le monde et vote pour les prochains designs du site.</p>
+                </div>
+
+                <div class="squares">
+                    <div class="icon-wrapper">
+                        <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
+                    </div>
+                    <h3>Secret Birthday</h3>
+                    <p>Une surprise magique expédiée directement chez toi le mois de ton anniversaire. Tout simplement.</p>
+                </div>
+            </div>
+
+            <p id="speech-fidelity">
+                * Les avantages du club sont cumulables et réservés exclusivement aux membres de la communauté GlowUp.
+                Aucun abonnement requis, la magie est 100% gratuite.
+            </p>
+        </section>
+
+        <!-------NEWSLETTER SECTION------->
+        <section id="newsletter">
+            <article id="right">
+                <h2>Inscris-toi à notre newsletter !</h2>
+
+                <form id="form-newsletter" class="newsletter-form-group">
+                    <label id="label-news" for="email-news">Ton adresse email :</label>
+                    <div class="input-wrapper-news">
+                        <input type="email" id="email-news" placeholder="Girly@email.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <button type="submit" id="btn-news" class="pop-up-trigger">GO !</button>
+                    </div>
+                </form>
+
+                <div id="text-section">
+                    <p>Pas de spam, c'est promis ! Rejoins +10 000 filles branchées et reçois chaque dimanche matin ton condensé de bonne humeur : inspirations mode, astuces beauté secrètes et coulisses de la communauté.</p>
+                    <p>🎁 Bonus de bienvenue : Un guide exclusif de 10 looks rétro à télécharger directement dans ta boîte mail dès ton inscription !</p>
+                </div>
+            </article>
+
+            <div id="left">
+                <picture>
+                     <source srcset="assets/images/y2k2.webp" type="image/webp">  
+                    <img src="assets/images/y2k9.jpg" alt="Couverture de magazine">
+                </picture>
+            </div>
+        </section>
+    </main>
+
+
+    <!-----FOOTER-------->
+    <footer>
+
+
+        <div class="inside-footer">
+            <nav class="footerNav">
+                <h4 class="footer-burger">Accueil</h4>
+                <ul class="footer-nav">
+                    <li><a href="index.html#intro">Intro</a></li>
+                    <li><a href="index.html#trending">Trendy</a></li>
+                    <li><a href="index.html#community">La Communauté</a></li>
+                    <li><a href="index.html#eco">Nos Valeurs</a></li>
+                </ul>
+            </nav>
+
+            <nav class="footerNav">
+                <h4 class="footer-burger">Espace Connexion</h4>
+                <ul class="footer-nav">
+                    <li><a href="#login">Créer un Compte</a></li>
+                    <li><a href="#fidelity">Le Programme de Fidélite</a></li>
+                    <li><a href="#newsletter">La Newsletter</a></li>
+                </ul>
+            </nav>
+
+            <nav id="bottom" class="footerNav">
+                <h4 class="footer-burger">Espace Personnel</h4>
+                <ul class="footer-nav">
+                    <li><a href="dashboard.html#bloc1-first">Mon Task Board</a></li>
+                    <li><a href="dashboard.html#column-down">Mon Profil</a></li>
+                    <li><a href="dashboard.html#more-section">Mes Préférences</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section id="social">
+            <h4>SUIVEZ-NOUS</h4>
+            <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Instagram">
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+
+            <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Tik Tok">
+                <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+            </a>
+
+            <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Facebook">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
         </section>
     </footer>
-    
+    <small id="credits"><em>© 2026 GlowUp Journey. Fait avec 🤍 pour la communauté. Tous droits réservés.</em></small>
+
+    <!-----POPUP---->
+    <dialog id="popup">
+        <button type="button" id="close-popup-btn" class="close-btn">❌</button>
+
+        <h2>Pas de Panique💖</h2>
+        <p>Site en construction! La V2 arrive bientôt avec des nouveautés palpitantes !</p>
+    </dialog>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/connexion.js" defer></script>
 </body>
 </html>

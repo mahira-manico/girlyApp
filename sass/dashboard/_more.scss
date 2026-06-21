@@ -1,0 +1,86 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../keyframes' as *;
+
+
+#more-section {
+    @include retro-block;
+
+    #more-rows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        #more-title {
+            @include title;
+        }
+
+      #card-more {
+       width: 100%;
+       margin-bottom: 20px; 
+       display: grid;
+       grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+       gap: 20px; 
+
+    .cards {
+        @include inner-card; 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        background-color: #ffffff;
+        padding: 15px;
+
+        .cards-img {
+            width: 100%;
+            height: 180px; 
+            object-fit: contain; 
+            border: 2px solid #000000;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            background-color: #f9f9f9; 
+        }
+
+        .cards-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #000000;
+            margin: 0 0 6px 0;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+        }
+
+        .cards-desc {
+            font-size: 0.85rem;
+            color: #444444;
+            line-height: 1.4;
+            margin: 0 0 10px 0;
+            overflow: hidden;
+        }
+
+        .cards-price {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: $pink-dark;
+            margin: auto 0 0 0; 
+            font-family: 'Courier New', Courier, monospace;
+        }
+    }
+}
+
+        .see-more {
+            width: 60%;
+            @include retro-button($cotton-candy);
+            padding: 10px 15px;      
+            border-radius: 30px;
+            &:hover {
+                transform: translate(-2px, -2px);
+                box-shadow: 4px 4px 0px #000000;
+                background-color: $soft-apricot;
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../keyframes' as *;
+
+form[role="form"] {
+    width: 100%;
+    padding: 20px 10px;
+    background-color: $soft-apricot; 
+    min-height: calc(100vh - 80px); 
+
+    h1 {
+        font-family: 'Impact', 'Arial Black', sans-serif; 
+        text-transform: uppercase;
+        font-size: 2.5rem;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #000000;
+        text-shadow: 3px 3px 0px $cotton-candy; 
+        margin-bottom: 25px;
+        margin-top: 20px;
+    }
+
+    #login {
+        width: calc(100% - 20px); 
+        margin: 20px auto;
+        background: linear-gradient(135deg, $soft-apricot, $cotton-candy, $pink-dark);
+        border: 4px solid black; 
+        box-shadow: 8px 8px 0px #000000; 
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 25px 15px;
+        box-sizing: border-box;
+
+        @include tablet {
+            max-width: 450px; 
+            margin: 40px auto; 
+            padding: 35px 30px; 
+        }
+
+        .bloc {
+            width: 100%;
+            display: flex;
+            flex-direction: column;            
+            padding: 10px 0;
+            gap: 8px;
+
+            label {
+                font-family: 'Arial Black', sans-serif;
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 0.5px;
+                text-align: start;
+                font-weight: 900;
+                color: #000000;
+                text-shadow: 1px 1px 0px #ffffff; 
+            }
+
+            input {
+                width: 100%;
+                box-sizing: border-box;
+                height: 48px; 
+                padding: 0 16px;
+                background-color: #ffffff; 
+                border: 3px solid black;
+                border-radius: 12px; 
+                font-family: 'Arial Black', sans-serif;
+                font-size: 0.95rem;
+                color: $night-bordeaux;
+                outline: none;
+                transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+
+                &:hover {
+                    transform: translate(-2px, -2px); 
+                    box-shadow: 4px 4px 0px #000000; 
+                    background-color: rgba(#ffffff, 0.9);
+                }
+
+                &:focus {
+                    border-color: #000000;
+                    background-color: #ffffff;
+                    box-shadow: 4px 4px 0px $cotton-candy; 
+                    transform: translate(-2px, -2px);
+                }
+
+                &::placeholder {
+                    color: rgba($night-bordeaux, 0.5);
+                    text-align: start;
+                }
+            }           
+        } 
+    }
+
+    #checks {
+        padding: 15px 0;
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        @include tablet {
+            align-items: flex-start;                  
+        }
+
+        small, label {
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            color: #000000;
+        }
+
+        small {
+            text-align: center;
+            font-size: 12px;
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        #policy1, #policy2 {
+            display: flex;
+            flex-direction: row-reverse;  
+            justify-content: flex-end; 
+            align-items: center;   
+            gap: 10px;
+            cursor: pointer;
+
+            label {
+                font-size: 13px;
+                cursor: pointer;
+            }
+
+            input[type="checkbox"] {
+                accent-color: $pink-dark; 
+                width: 18px;
+                height: 18px;
+                cursor: pointer;
+            }
+        }
+    }    
+    #btn-create {
+        width: 100%;
+        max-width: 250px;
+        height: 50px;
+        margin: 20px auto 0 auto;
+        border: solid 3px black;
+        border-radius: 12px;
+    
+        background: linear-gradient(135deg, $cotton-candy, $pink-dark);
+        background-size: 200% 200%;
+        animation: rainbow-shift 3s ease infinite; 
+
+        color: #000000;
+        font-family: 'Arial Black', sans-serif;
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-transform: uppercase;
+        box-shadow: 4px 4px 0px #000000;
+        cursor: pointer;
+        display: block;       
+        transition: all 0.1s ease-in-out;
+
+        &:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0px #000000;
+        }
+
+        &:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px #000000;
+        }
+    }
+
+    .forgot-password-text {
+        text-align: center;
+        margin-top: 20px;
+
+        a {
+            color: $night-bordeaux;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-weight: 900;
+            transition: color 0.2s ease;
+
+            &:hover {
+                color: $pink-dark;
+                text-decoration: underline;
+            }
+        }
+    }
+}

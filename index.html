@@ -3,171 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvre ton espace safe : conseils skincare, routines bien-être, mode rétro et sélection trendy pour cultiver ta paix au quotidien.">
+    <link rel="stylesheet" href="/sass/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e5c3b78bc9.js" crossorigin="anonymous"></script>
     <title>Accueil</title>
 </head>
 <body>
-      <header>
-        <nav>
-            <ul>
-                <li><a href="#Accueil">Accueil</a></li>
-                <li><a href="#Espace">Mon Espace</a></li>
-                <li><a href="#apropos">A Propos</a></li>
-                <li><a href="#communaute">Communauté</a></li>
-                <li><a href="#contacts">Contacts</a></li>
 
-                <search>
-                <form action="./search/">
-                    <input type="search" id="products"  placeholder="Rechercher un produit..."/>
-                    <button type="submit">Rechercher</button>
-                </form>
-                </search>
+  <!----------HEADER------------>
+  <header>
+    <nav>
 
+        <div class="nav-top-bar">
+            
+            <div class="menu-burger">
+                <a href="#Menu"  aria-label="Ouvrir le menu de navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </a>
+            </div>
+
+            <div class="logo-site">
+                <a href="index.html">
+                    <video autoplay loop muted playsinline class="logo-gif">
+                     <source src="assets/video/logo.webm" type="video/webm">
+                     </video>
+                </a>
+            </div>
+
+            <ul class="nav-links-right">
+                <li>
+                    <a href="#trending">
+                        <i class="fa-solid fa-spa" aria-hidden="true"></i>
+                        <span class="link-text">Trendy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#community">
+                        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+                        <span class="link-text">La Communauté</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#eco">
+                        <i class="fa-solid fa-users" aria-hidden="true"></i>
+                        <span class="link-text">Notre Engagement</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="connexion.html">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span class="link-text">Se Connecter</span>
+                    </a>
+                </li>
             </ul>
-        </nav>
-    </header>
 
-    <main role="main">
-        <section class="intro">
+        </div>
+
+        <search>
+            <form>
+                <input type="search" id="products" placeholder="Rechercher un produit..."/>
+                <button type="submit" aria-label="rechercher">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+        </search>
+
+    </nav>
+</header>
+
+    <main role="main" id="index">
+        <!----------INTRO--------->
+        <section class="intro" id="intro">
+        <div class="intro-slider">
+    <div class="slider-track">
         <picture>
-          <source media="(max-width: 600px)" srcset="assets/images/hero-mobile.jpg">
-          <img src="assets/images/hero-desktop.jpg" alt="Modèles aux styles Y2K">
+          <source srcset="assets/images/y2k1.webp" type="image/webp">  
+          <img src="assets/images/y2k1.jpg" alt="Look Y2K 1">
         </picture>
 
-         <div id="main-intro">
-            <h1>Bienvenue dans le site pour les girls!</h1>
-            <video autoplay muted loop loading="lazy" width="250">
-            <source src="" type="video/webm" />
-            </video>
+        <picture>
+          <source srcset="assets/images/y2k2.webp" type="image/webp">  
+          <img src="assets/images/y2k2.jpg" alt="Look Y2K 2">
+        </picture>
 
-            <button id="slide-to-trendy" type="button">
-                Deviens ton best self
-            </button>
+       <picture>
+          <source srcset="assets/images/y2k3.webp" type="image/webp">  
+          <img src="assets/images/y2k3.jpg" alt="Look Y2K 3">
+        </picture>
+
+        <picture>
+          <source srcset="assets/images/y2k4.webp" type="image/webp">  
+          <img src="assets/images/y2k4.jpg" alt="Look Y2K 4">
+        </picture>
+
+        <picture>
+          <source srcset="assets/images/y2k5.webp" type="image/webp">  
+          <img src="assets/images/y2k5.jpg" alt="Look Y2K 5">
+        </picture>
+    </div>
+</div>
+
+         <div id="main-intro">
+
+           <div id="hero-text">
+
+            <blockquote id="hero-quote"><em>« Priorise ta paix, cultive ta beauté. »</em></blockquote>
+            <p id="hero-txt">Bienvenue dans ton espace safe. Ici, on parle d’organisation, de skincare, de routines bien-être et de tout ce qui t'aide à devenir, chaque jour, la meilleure version de toi-même. Rejoins le club, prends soin de toi, et avance à ton rythme.</p>
+
+            
+            <a href="#trending">
+            <button id="slide-to-trendy" type="button">Inspire toi</button>
+            </a>
+
+            </div>
+
+            <video autoplay muted loop loading="lazy" width="250" class="hero-video">
+            <source src="assets/video/main.webm" type="video/webm" />
+            </video>
+            <img src="assets/images/y2k8.webp" alt="Image de secours" class="hero-mobile-img">
 
         </div>
 
         </section>
 
+        <!-----------PROMO IMAGES------------>
         <section id="ad-images">
+            <picture>
+             <source srcset="assets/images/y2k6.webp" type="image/webp">  
+             <img src="assets/images/y2k6.jpg" alt="Look Y2K 6">
+            </picture>
 
-           <img src="" alt="" loading="lazy" width="150" height="50" decoding="async">
-           <img src="" alt="" loading="lazy" width="150" height="50" decoding="async">
-           <img src="" alt="" loading="lazy" width="150" height="50" decoding="async">
-
+            <picture>
+              <source srcset="assets/images/y2k7.webp" type="image/webp">  
+              <img src="assets/images/y2k7.jpg" alt="Look Y2K 7">
+            </picture>
+      
+            <picture>
+             <source srcset="assets/images/y2k8.webp" type="image/webp">  
+             <img src="assets/images/y2k8.jpg" alt="Look Y2K 8">
+            </picture>
         </section>
 
+        <!----------TRENDY SECTION------------->
         <section id="trending">
             <h2>Trending du moment</h2>
 
             <div id="trendy-cards">
 
-                <article class="products">
-                    <button class="like" aria-label="Ajouter aux favoris">❤</button>
-                        <img src="" alt="" loading="lazy" width="150" height="50" class="img-trendy">
-                        <h3 class="product-name"></h3>
-                        <p class="product-desc"></p>
-                        <span class="product-price"></span>
-                </article>
-                <button id="more-trendy">Voir Plus</button>
-            </div>         
+             
+                  </div>       
+                <button id="more-trendy">Voir Plus</button>  
         </section>
+<!--------COMMUNITY--------->
+<section id="community"> 
+    <div class="retro-stars" aria-hidden="true">✦ ✧ ✦ ✦ ✧ ✦ ✦ ✧ ✦ ✦ ✧ ✦ ✦ ✧ ✦ ✦ ✧ ✦ ✦ ✧ ✦ ✦ ✧</div>
+    
+    <h2 id="community-title">La Communauté</h2>
+    
+    <div class="community-content">
+         <picture>
+          <source srcset="assets/images/y2k10.webp" type="image/webp">  
+          <img src="assets/images/y2k10.jpg" alt="Group Girl">
+        </picture>
+        
+        <div class="community-form-box">
+            <label for="email-community">Rejoins le Club ! 💌</label>
+            <p class="community-text">
+    Deviens membre VIP pour recevoir nos drops exclusifs, des réductions secrètes à shopper d'urgence et toute l'actu de la commu avant tout le monde. No spam, only trend ! ✨⚡
+</p>
+            <form id="form-community">
+                <input type="email" id="email-community" placeholder="Entre ton e-mail..." required>
+                <button type="button" id="com-btn" class="pop-up-trigger">GO! 🚀</button>
+            </form>
+        </div>
+    </div>
+</section>
 
-        <section id="community">
-            <img src="" alt="" id="img-community">
-            <h2 id="community-title">La Communauté</h2>
-            <label for="email-community">Rejoins le Club!</label>
-            <input type="email" id="email-community" placeholder="Entre ton e-mail" required>
-        </section>
-
+        <!------------ECO-RESPONSIBILITY--------->
         <section id="eco">
             
             <h3 id="eco-title">Notre Démarche</h3>
-            <span id="label-eco">+190</span>
-            <p id="eco-text1"></p>
+
+            <div id="bloc-eco">
+            <span id="label-eco">+50</span>
+            <small>partenaires</small>
+            </div>
+
+            <div id="partnership">
+              <img src="assets/images/alo.svg" alt="logo alo" loading="lazy" width="120" height="40">
+              <img src="assets/images/dior.svg" alt="logo dior" loading="lazy" width="120" height="40">
+              <img src="assets/images/etam.svg" alt="logo etam" loading="lazy" width="120" height="40">
+              <img src="assets/images/gymshark.svg" alt="logo gymshark" loading="lazy" width="120" height="40">
+              <img src="assets/images/kiko.svg" alt="logo kiko" loading="lazy" width="120" height="40">
+              <img src="assets/images/lancome.svg" alt="logo lancome" loading="lazy" width="120" height="40">
+              <img src="assets/images/medicube.svg" alt="logo medicube" loading="lazy" width="120" height="40">
+              <img src="assets/images/sephora.svg" alt="logo sephora" loading="lazy" width="120" height="40">
+              <img src="assets/images/truereligion.svg" alt="logo true religion" loading="lazy" width="120" height="40">
+            </div>
+
+            <p id="eco-text1">Chez <em>Girly</em>, on croit qu'être belle ne devrait jamais coûter à la <em>planète</em>. C'est pourquoi chaque produit que nous sélectionnons répond à des critères stricts <em>d'éthique</em> et de durabilité. Plus de <em>50</em> marques partenaires partagent notre vision d'une beauté <em>responsable</em> et inclusive.</p>
 
             <article class="eco-bubble">
-                 <p id="eco-text2"></p>
                  <div class="round-eco">
-                    <img src="" alt="" class="round-txt-eco" width="150" height="50" loading="lazy">
+                    <picture>
+                     <source srcset="assets/images/y2k11.webp" type="image/webp">  
+                     <img src="assets/images/y2k11.jpg" alt="Cruelty Free Logo">
+                    </picture>
                  </div>
-                  <div class="round-eco">
-                    <img src="" alt="" class="round-txt-eco" width="150" height="50" loading="lazy">
-                 </div>
+                  <p id="eco-text2"><em>Formules 100% Cruelty-Free</em> Aucun de nos produits ou ingrédients n'est testé sur les animaux. Nous travaillons uniquement avec des labels certifiés éthiques.</p>
             </article>
 
               <article class="eco-bubble">
-                 <p id="eco-text3"></p>
                  <div class="round-eco">
-                    <img src="" alt="" class="round-txt-eco" width="150" height="50" loading="lazy">
+                    <picture>
+                     <source srcset="assets/images/y2k12.webp" type="image/webp">  
+                    <img src="assets/images/y2k12.jpg" alt="Eco Picture">
+                    </picture>
                  </div>
-                  <div class="round-eco">
-                    <img src="" alt="" class="round-txt-eco" width="150" height="50" loading="lazy">
-                 </div>
+                 <p id="eco-text3"><em>Packagings Éco-conçus</em> Nos partenaires utilisent du verre recyclable ou du plastique repêché dans les océans pour limiter au maximum les déchets.</p>
             </article>
         </section>
     </main>
 
+    <!----------FOOTER------------->
     <footer>
-        <img src="" alt="" loading="lazy" id="logo" width="150" height="50">
         
-        <nav id="more">
-         <div class="inside-footer">
-            <h4></h4>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <div class="inside-footer">
+        <nav class="footerNav">
+             <h4 class="footer-burger">Accueil</h4>
+            <ul class="footer-nav">
+                <li><a href="#intro">Intro</a></li>
+                <li><a href="#trending">Trendy</a></li>
+                <li><a href="#community">La Communauté</a></li>
+                <li><a href="#eco">Nos Valeurs</a></li>
             </ul>
-         </div>
         </nav>
        
-        <nav id="policy">
-        <div class="inside-footer">
-            <h4></h4>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <nav class="footerNav">
+            <h4 class="footer-burger">Espace Connexion</h4>
+            <ul class="footer-nav">
+                <li><a href="connexion.html#login">Créer un Compte</a></li>
+                <li><a href="connexion.html#fidelity">Le Programme de Fidélite</a></li>
+                <li><a href="connexion.html#newsletter">La Newsletter</a></li>
             </ul>
-         </div>
         </nav>
 
-        <nav id="about">
-        <div class="inside-footer">
-            <h4></h4>
-             <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <nav id="bottom" class="footerNav">
+            <h4 class="footer-burger">Espace Personnel</h4>
+             <ul class="footer-nav">
+                <li><a href="dashboard.html#bloc1-first">Mon Task Board</a></li>
+                <li><a href="dashboard.html#column-down">Mon Profil</a></li>
+                <li><a href="dashboard.html#more-section">Mes Préférences</a></li>
             </ul>
-         </div>
         </nav>
+    </div>
 
         <section id="social">
-            <div id="insta-round">
+            <h4>SUIVEZ-NOUS</h4>
                <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Instagram">
-                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                </a>
-            </div>
 
-            <div id="tiktok-round">
                 <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Tik Tok">
-                    <i class="fa-brands fa-tiktok"></i>
+                    <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
                 </a>
-            </div>
 
-            <div id="facebook-round">
                  <a href="" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Facebook">
-                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                  </a>
-            </div>
-
-            <small>Made with love by Mahira @Copywright</small>
         </section>
     </footer>
+      <small id="credits"><em>© 2026 GlowUp Journey. Fait avec 🤍 pour la communauté. Tous droits réservés.</em></small>
+
+      <!---------POPUP-------->
+      <dialog id="popup">
+      <button type="button" id="close-popup-btn" class="close-btn">❌</button>
+    
+      <h2>Pas de Panique💖</h2>
+      <p>Site en construction! La V2 arrive bientôt avec des nouveautés palpitantes !</p>
+     </dialog>
     
     
+      <script src="js/main.js" defer></script>
+      <script src="js/connexion.js" defer></script>
 </body>
 </html>

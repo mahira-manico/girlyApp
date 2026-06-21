@@ -1,0 +1,222 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../keyframes' as *;
+
+header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: $pink-dark; 
+    padding: 14px 15px;
+    border-bottom: 4px solid black; 
+    box-shadow: 0 5px 0px black; 
+    box-sizing: border-box; 
+
+    nav {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        position: relative; 
+
+        @include desktop {
+            flex-direction: row; 
+            justify-content: space-between;
+            gap: 40px;
+        }
+        //MOBILE DISPLAY
+        &.active {
+            .nav-links-right {
+                display: flex;
+            }
+        }
+
+        .nav-top-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between; 
+            align-items: center;
+            width: 100%;
+
+            @include desktop {
+                width: auto; 
+                gap: 40px;
+            }
+
+            //MENU FOR MOBILE
+            .menu-burger {
+                display: block;
+                cursor: pointer;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                //HID IN DESKTOP
+                @include desktop {
+                    display: none; 
+                }
+
+                a {
+                    color: $cotton-candy;
+                    font-size: 1.8rem;
+                    text-decoration: none;
+                    text-shadow: 2px 2px 0px black;
+                }
+            }
+
+            //LOGO
+            .logo-site .logo-gif {
+                height: 75px; 
+                width: auto;
+                object-fit: contain;
+
+                &:hover {
+                    transform: scale(1.08) rotate(-2deg);
+                }
+            }
+        }
+
+        //HID MENU
+        .nav-links-right {
+            display: none; 
+            flex-direction: column;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 30px 20px;
+            width: 100%;
+            background-color: $pink-dark;
+ 
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            right: 0; 
+            box-sizing: border-box; 
+            
+            border-bottom: 4px solid black;
+            box-shadow: 0 6px 0px rgba(0, 0, 0, 0.2);
+
+            //SHOW THE BURGER MENU
+            z-index: 999; 
+
+            @include desktop {
+                display: flex; 
+                flex-direction: row;
+                position: static;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                width: auto;
+                gap: 25px;
+            }
+
+            li {
+                width: 100%;
+                text-align: center;
+
+                @include desktop {
+                    width: auto;
+                }
+
+                a {
+                    color: $soft-apricot; 
+                    font-family: 'Arial Black', sans-serif; 
+                    font-weight: 900;
+                    text-transform: uppercase;
+                    font-size: 1.05rem;
+                    text-decoration: none;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+                    padding: 12px 0;
+                    transition: all 0.2s ease;
+
+                    i {
+                        color: $cotton-candy;
+                        transition: transform 0.2s ease;
+                    }
+
+                    @include desktop {
+                        padding: 6px 14px;
+                        border: 2px solid transparent;
+                        border-radius: 10px;
+                    }
+
+                    &:hover {
+                        color: $cotton-candy;
+
+                        @include desktop {
+                            background-color: black; 
+                            border-color: black;
+                            box-shadow: 3px 3px 0px $cotton-candy;
+                            transform: translate(-2px, -2px);
+                        }
+                    }
+                }
+            }
+        }
+
+        search {
+            width: 100%; 
+            display: flex;
+
+            @include desktop {
+                width: 320px; 
+            }
+        }
+
+        form {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 8px 16px;
+            background-color: $soft-apricot; 
+            border: 3px solid #000000; 
+            border-radius: 14px; 
+            box-shadow: 4px 4px 0px #000000; 
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+            &:focus-within {
+                transform: translate(-2px, -2px);
+                box-shadow: 4px 4px 0px $cotton-candy; 
+            }
+
+            input[type="search"] {
+                width: 100%;
+                flex: 1;
+                border: none;
+                background: none;
+                outline: none;
+                font-family: 'Arial Black', sans-serif;
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: $night-bordeaux; 
+
+                &::placeholder {
+                    color: rgba($night-bordeaux, 0.6); 
+                    opacity: 1;
+                }
+            }
+
+            button {
+                background: none;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4px;
+                transition: transform 0.2s ease;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}

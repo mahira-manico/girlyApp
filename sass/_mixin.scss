@@ -1,0 +1,88 @@
+@use 'variables' as *;
+
+@mixin img-settings{
+     max-width:100%;
+     height: auto;
+     display: block;
+   
+}
+
+//USED IN DASHBOARD FOR FASTER STYLISATION
+@mixin retro-block {
+    width: 90%;
+    margin: 20px auto;
+    box-sizing: border-box;
+    padding: 25px 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #fffdfd; 
+    background-image: 
+        linear-gradient(rgba($cotton-candy, 0.12) 1px, transparent 1px),
+        linear-gradient(90deg, rgba($cotton-candy, 0.12) 1px, transparent 1px);
+    background-size: 20px 20px;
+
+    border: 4px solid #000000;
+    box-shadow: 6px 6px 0px #000000;
+    border-radius: 24px;
+
+    &::before, &::after {
+        pointer-events: none; 
+        user-select: none;
+    }
+
+    &::before {
+        content: '✦';
+        position: absolute;
+        bottom: -5px;
+        right: 10px;
+        font-size: 3rem;
+        color: rgba($cotton-candy, 0.2); 
+    }
+
+    @include tablet {
+        margin: 10px;
+        width: 100%;
+        padding: 30px 25px;
+    }
+}
+
+@mixin inner-card {
+    background-color: #fcf9f7;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 2px 2px 0px #000000;
+}
+
+@mixin retro-button($bg-color) {
+    background-color: $bg-color;
+    color: #000000;
+    border: 2px solid #000000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+    &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px 0px #000000;
+    }
+}
+
+@mixin title{
+    font-family: 'Impact', sans-serif;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px $cotton-candy;
+}
+
+@mixin tablet {
+    @media (min-width: 768px) { 
+        @content; 
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+         @content;
+         }
+}

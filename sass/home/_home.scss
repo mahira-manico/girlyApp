@@ -1,0 +1,8 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../keyframes' as *;
+
+#index {
+    min-height: 100vh;
+    margin: 0; 
+}

@@ -1,0 +1,168 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../keyframes' as *;
+
+#calendar {
+    @include retro-block;
+    margin: 15px auto; 
+    padding: 20px;
+
+    #calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 25px;
+        background-color: #000000; 
+        padding: 10px 15px;
+        border-radius: 14px;
+        border: 2px solid #000000;
+        box-shadow: 3px 3px 0px $cotton-candy;
+
+        #calendar-month {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            #previous, #next {
+                cursor: pointer;
+                background-color: $cotton-candy;
+                color: #000000;
+                font-family: 'Arial Black', sans-serif;
+                font-weight: 900;
+                border: 2px solid #000000;
+                padding: 4px 10px;
+                border-radius: 8px;
+                box-shadow: 2px 2px 0px #000000;
+                user-select: none;
+                transition: transform 0.1s ease, box-shadow 0.1s ease;
+
+                &:focus-visible, &:hover {
+                    transform: translate(-1px, -1px);
+                    box-shadow: 3px 3px 0px $pink-dark;
+                    background-color: $soft-apricot;
+                    outline: 2px solid black;
+                }
+            }
+
+            #month-title {
+                font-family: 'Impact', 'Arial Black', sans-serif;
+                text-transform: uppercase;
+                font-size: 1.3rem;
+                color: #ffffff; 
+                letter-spacing: 1px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                small {
+                    font-size: 0.8rem;
+                    font-weight: 900;
+                    color: $cotton-candy; 
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        #btn-calendar {
+            background-color: $pink-dark;
+            color: #ffffff;
+            border: 2px solid #000000;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            font-size: 1.1rem;
+            font-family: 'Arial Black', sans-serif;
+            cursor: pointer;
+            box-shadow: 2px 2px 0px #000000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.1s ease;
+
+            &:hover, &:focus-visible {
+                transform: scale(1.1) rotate(15deg);
+                background-color: $soft-apricot;
+                color: #000000;
+            }
+        }
+    }
+
+    #row-days, #numbers {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr); 
+        gap: 8px; 
+        text-align: center;
+    }
+
+    #calendar-days {
+        margin-bottom: 15px;
+        border-bottom: 3px dashed #000000;
+        padding-bottom: 10px;
+
+        .day-name {
+            font-size: 0.85rem;
+            font-family: 'Arial Black', sans-serif;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $night-bordeaux; 
+            background-color: rgba($soft-apricot, 0.5);
+            padding: 4px 0;
+            border-radius: 6px;
+        }
+    }
+
+    #calendar-number {
+        .day, .day-active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1;
+            font-family: 'Arial Black', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 900;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 2px solid #000000;
+            box-shadow: 2px 2px 0px #000000;
+            will-change: transform, box-shadow; 
+            transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s ease;
+        }
+
+        .day {
+            color: #000000;
+            background-color: #ffffff;
+
+            &:nth-child(even) {
+                background-color: #fff4f1; 
+            }
+
+            &:hover, &:focus-visible {
+                background-color: $cotton-candy; 
+                transform: translate(-3px, -3px);
+                box-shadow: 5px 5px 0px #000000;
+                outline: none;
+            }
+        }
+
+        .day-active {
+            background: linear-gradient(135deg, $cotton-candy, $night-bordeaux);
+            background-size: 200% 200%;
+            color: #ffffff;
+            text-shadow: 2px 2px 0px #000000; 
+            transform: translate(-2px, -2px);
+            box-shadow: 4px 4px 0px #000000;
+        
+            &:hover, &:focus-visible {
+                animation: rainbow-shift 1.5s linear infinite;
+                transform: translate(-3px, -3px) scale(1.03);
+                box-shadow: 5px 5px 0px #000000;
+            }
+        }
+    }
+}

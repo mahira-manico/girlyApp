@@ -1,0 +1,60 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../keyframes' as *;
+
+
+#messages {
+   @include retro-block;
+   @include tablet{
+    min-height:308px;
+   }
+
+    #messages-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        #message-title {
+         @include title;
+        }
+
+        #image-row {
+            width: 100%;
+
+            #message-list {
+                list-style: none; 
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 12px; 
+
+                .message-item {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center; 
+                    @include inner-card;
+                    box-sizing: border-box;
+                    transition: transform 0.1s ease;
+
+                    &:hover {
+                        transform: translate(-1px, -1px);
+                        box-shadow: 3px 3px 0px #000000;
+                        background-color: $soft-apricot;
+                    }
+
+                    .text-msg {
+                        font-size: 0.9rem;
+                        color: #000000;
+                        line-height: 1.4;
+                        flex: 1;
+
+                        strong {
+                            color: $pink-dark; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

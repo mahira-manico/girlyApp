@@ -1,0 +1,150 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../keyframes' as *;
+
+#newsletter {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap-reverse; 
+    background-color: $soft-apricot; 
+    width: 100%;
+    box-sizing: border-box;
+    border-top: 4px solid black; 
+    border-bottom: 4px solid black;
+
+    @include desktop {
+        border: 4px solid black; 
+        max-width: 950px; 
+        margin: 50px auto; 
+        box-shadow: 8px 8px 0px #000000;
+        border-radius: 24px;
+        overflow: hidden; 
+    }
+
+    #right {
+        box-sizing: border-box;
+        padding: 30px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include desktop {
+            width: 50%; 
+            padding: 45px;
+        }
+
+        h2 {
+            font-family: 'Impact', 'Arial Black', sans-serif; 
+            text-transform: uppercase;
+            font-size: 2rem;
+            letter-spacing: 1px;
+            color: #000000;
+            text-shadow: 3px 3px 0px $cotton-candy; 
+            margin-bottom: 25px;
+        }
+
+        .newsletter-form-group {
+            margin-bottom: 25px;
+            width: 100%;
+
+            #label-news {
+                display: block;
+                font-family: 'Arial Black', sans-serif; 
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-weight: 900;
+                margin-bottom: 8px;
+                letter-spacing: 0.5px;
+            }
+
+            .input-wrapper-news {
+                display: flex;
+                width: 100%;
+                box-shadow: 4px 4px 0px #000000; 
+                border-radius: 12px;
+
+                input[type="email"] {
+                    flex: 1; 
+                    border: 3px solid #000000;
+                    border-right: none;
+                    padding: 14px 16px;
+                    font-family: 'Arial Black', sans-serif;
+                    font-size: 0.9rem;
+                    background-color: #ffffff;
+                    color: $night-bordeaux;
+                    outline: none;
+                    box-sizing: border-box;
+                    height: 52px;
+
+                    &::placeholder {
+                        color: rgba($night-bordeaux, 0.5);
+                    }
+                }
+
+                #btn-news {
+                    background: linear-gradient(135deg, $cotton-candy, $pink-dark);
+                    color: black;
+                    font-weight: bold;
+                    border: 3px solid #000000;
+                    padding: 0 25px;
+                    cursor: pointer;
+                    font-family: 'Arial Black', sans-serif;
+                    font-size: 1rem;
+                    height: 52px;
+                    transition: all 0.2s ease;
+
+                    &:hover {
+                        filter: brightness(1.1);
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        #text-section {
+            p {
+                font-size: 0.9rem;
+                color: #000000;
+                margin-bottom: 15px;
+                padding: 15px 10px 0 10px;
+                border-top: 3px dashed black; 
+                font-weight: 600;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    color: $night-bordeaux; 
+                    font-weight: 900;
+                    font-style: normal;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+
+    #left {
+        flex: 1;
+        min-width: 280px;
+        margin-bottom: 0; 
+        background-color: black; 
+        @include tablet {
+            width: 50%; 
+            height: auto; 
+        }
+        
+        img {
+            width: 100%;
+            max-height: 320px; 
+            object-fit: cover; 
+            display: block; 
+            border-bottom: 4px solid #000000; 
+
+            @include tablet {
+                height: 100%; 
+                max-height: none;              
+                border: none;
+                border-right: 4px solid black; 
+            }
+        }
+    }
+}

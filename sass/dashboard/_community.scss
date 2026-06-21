@@ -1,0 +1,62 @@
+@use '../variables' as *;
+@use '../mixin' as *;
+@use '../keyframes' as *;
+
+    
+#community-dashboard {
+   @include retro-block;
+   @include tablet{
+    min-height:210px;
+   }
+
+    #blog-row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .community-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+
+            #blog-title {
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: #000000;
+            }
+
+            #post-btn {
+                @include retro-button($soft-apricot);
+                padding: 6px 12px;
+                border-radius: 20px;
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        #row-users {
+            background-color: #fcf9f7;
+            border: 2px solid #000000;
+            border-radius: 12px;
+            padding: 15px;
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05);
+
+            .user-names {
+                font-size: 0.9rem;
+                font-weight: bold;
+                color: $pink-dark;
+                margin: 0 0 6px 0;
+                font-family: 'Courier New', Courier, monospace;
+            }
+
+            .user-text {
+                font-size: 0.9rem;
+                color: #000000;
+                line-height: 1.4;
+                margin: 0;
+            }
+        }
+    }
+}
