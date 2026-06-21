@@ -2254,7 +2254,7 @@ form[role=form] #checks {
 }
 @media (min-width: 768px) {
   form[role=form] #checks {
-    align-items: flex-start;
+    align-items: center;
   }
 }
 form[role=form] #checks small, form[role=form] #checks label {

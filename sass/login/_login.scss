@@ -100,7 +100,7 @@ form[role="form"] {
         width: 100%;
 
         @include tablet {
-            align-items: flex-start;                  
+            align-items:center;                  
         }
 
         small, label {
