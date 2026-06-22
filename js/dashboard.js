@@ -121,7 +121,7 @@ function generateCards(){
     productsLoader.forEach((product)=>{ //loop for each product
 
 
-        const newCard=document.createElement('div'); //create new div to contain the cards
+        const newCard=document.createElement('article'); //create new article to contain the cards
         newCard.classList.add('cards'); //Add style sass to the card
 
         //Inject html to the cards
