@@ -4,7 +4,7 @@ Bienvenue sur **Girly**, une application web front-end pensée comme un espace s
 
 ## 🚀 Liens du Projet
 - **Site de Production en Ligne :** [Netlify](https://girlyappon.netlify.app/)
-- **Dépôt du Code Source :** [Github](https://l-adresse-de-ton-site.com)
+- **Dépôt du Code Source :** [Github](https://github.com/mahira-manico/girlyApp.git)
 
 ---
 
